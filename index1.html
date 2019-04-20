@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>HTML5自由者</title>
+     <style>
+          #svgForStroke {
+            
+              width: 200px;
+              height: 200px;
+              stroke-dasharray: 180%;
+              stroke-dashoffset: 0%;
+              stroke: #ED6E5C;
+               /*stroke-linecap:round;*/
+              fill: none;
+              
+          }
+         
+     </style>
+</head>
+<body>
+    <svg height="108" version="1.1" width="108" 
+    style="overflow: hidden; position: relative; left: -0.5px;">
+        <path class="ring" rate="${deal.attrs.rate}" fill="none" x="54" y="7" r="47" stroke="#fd30ae" d="M54,7A47,47,0,1,1,11,71" stroke-width="4" />
+    </svg>
+     <svg id="svgForStroke" >
+          <circle cx="50%" cy="50%" r="50" stroke-width="10"></circle>
+     </svg>
+</body>
+</html>
