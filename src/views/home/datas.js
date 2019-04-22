@@ -21,7 +21,7 @@ export let infoList = [
     title: '流程', 
     value: 29, 
     icon: "icon iconfont icon-process", 
-    link: '/'
+    link: '/process'
   },
 ]
 
@@ -34,22 +34,22 @@ export let works = [
   {
     title: '管理审批',
     icon: 'icon iconfont icon-admin',
-    url: '/'
+    url: '/adminapprove'
   },
   {
     title: '未处理会签',
     icon: 'icon iconfont icon-untreated',
-    url: '/'
+    url: '/joinsign'
   },
   {
     title: '零件工作审批',
     icon: 'icon iconfont icon-parts',
-    url: '/'
+    url: '/parts'
   },
   {
     title: '输出物审批',
     icon: 'icon iconfont icon-output',
-    url: '/'
+    url: '/parts'
   },
 ]
 

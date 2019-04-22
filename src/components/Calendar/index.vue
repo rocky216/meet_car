@@ -4,7 +4,9 @@
       <li v-for="(item, index) in weeks" :key="index">{{item}}</li>
     </ul>
     <ul class="days">
-      <li v-for="(item, index) in days" :key="index" @click="()=>show=true">{{item.day}}</li>
+      <li v-for="(item, index) in days" :key="index" @click="getSite(item)">
+        <span :class="{issite: item.site}">{{item.day}}</span>
+      </li>
     </ul>
     <van-popup v-model="siteShow" position="bottom">
       <van-picker :columns="siteList" />
@@ -112,6 +114,10 @@ export default {
     
   },
   methods: {
+    getSite(item){
+      if(!item.day) return;
+      this.show = true;
+    },
     handlenSite(){
       this.siteShow = true
     },
@@ -147,7 +153,8 @@ export default {
           })
         }else{
           dayArr.push({
-            day: i-startWeek
+            day: i-startWeek,
+            site: i-startWeek<10?true:false
           })
         }
       }
@@ -162,20 +169,37 @@ export default {
 
 .weeks {
   display: flex;
-  background-color: #e9e9e9;
+  background-color: #f1f3f5;
+  line-height: 100px;
   li {
     flex: 1;
     text-align: center;
+    color: #999;
   }
 }
 .days {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 20px; 
+  background: #fff;
   li {
     width: 107.14px;
     height: 107.14px;
-    line-height: 107.14px;
     text-align: center;
+    background: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    line-height: 85px;
+    color: #999;
+    .issite {
+      background: #66bafd;
+      color: #fff;
+      display: block;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      
+    }
   }
 }
 .morning {

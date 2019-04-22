@@ -4,7 +4,7 @@
     <div class="dateTop">
       <div class="date">
         <i class="icon iconfont icon-arrow-left left" @click="switchDate(1)"></i>
-        <span>{{nowData}}</span>
+        <span>{{nowData.substring(0,7)}}</span>
         <i  class="icon iconfont icon-arrow-right right" @click="switchDate(2)"></i>
       </div>
     </div>
@@ -62,6 +62,11 @@ export default {
   background-color: #ddd;
   .date {
     flex: 1;
+    background-color: #fff;
+    i {
+      font-size: 35px;
+      margin: 0 20px;
+    }
   }
   .historySign {
     flex: 2

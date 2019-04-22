@@ -12,6 +12,13 @@ import Warn from "@/views/warn"
 import Approval from "@/views/warn/approval"
 import News from "@/views/news"
 import NewsDetail from "@/views/news/detail"
+import Process from "@/views/process"
+import FlowChart from "@/views/process/flow_chart"
+import AdminApprove from "@/views/adminapprove"
+import Joinsign from "@/views/joinsign"
+import JoinsignDetail from "@/views/joinsign/detail"
+import Parts from "@/views/parts"
+import PartApproval from "@/views/parts/part_approval"
 
 Vue.use(Router)
 
@@ -99,6 +106,55 @@ export default new Router({
             index: 2
           }
         },
+        {
+          path: '/process',
+          component: Process,
+          meta: {
+            index: 1
+          }
+        },
+        {
+          path: '/flow_chart',
+          component: FlowChart,
+          meta: {
+            index: 2
+          }
+        },
+        {
+          path: '/adminapprove',
+          component: AdminApprove,
+          meta: {
+            index: 1
+          }
+        },
+        {
+          path: '/joinsign',
+          component: Joinsign,
+          meta: {
+            index: 1
+          }
+        },
+        {
+          path: '/joinsign/detail',
+          component: JoinsignDetail,
+          meta: {
+            index: 2
+          }
+        },
+        {
+          path: '/parts',
+          component: Parts,
+          meta: {
+            index: 1
+          }
+        }, 
+        {
+          path: '/partapproval',
+          component: PartApproval,
+          meta: {
+            index: 2
+          }
+        }, 
       ]
     }        
   ],
