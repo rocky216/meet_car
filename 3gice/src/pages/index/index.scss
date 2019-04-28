@@ -1,0 +1,122 @@
+
+@import '../../app.scss';
+
+.top {
+  background-color: $primary;
+  height: 270px;
+  font-size: 28px;
+  .title {
+    padding:25px 25px 30px 0;
+    text-align: right;
+    color: $white;
+    font-size: 32px;
+    Text{
+      color: $white;
+      font-size: 32px;
+    }
+  }
+  .header {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    height: 100px;
+    margin:0 25px;
+    position: relative;
+    .headImg {
+      width: 115px;
+      height: 115px;
+      border: 8px solid $white;
+      box-sizing: border-box;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      top: -50px;
+      left: 25px;
+      .img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text {
+      display: flex;
+      justify-content: flex-end;
+      .nosigin {
+        margin-top: 30px;
+      }
+      .sign {
+        padding: 10px 20px;
+        background: linear-gradient(to top right, $primary , #b7dbf8);
+        color:$white;
+        border-radius: 30px 0 0 30px;
+        margin-top: 20px;
+        .icon {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+
+.workList {
+  margin: 0 25px;
+  height: 105px;
+  position: relative;
+  .work_pos {
+    position: absolute;
+    top: -45px;
+    width: 100%;
+    background: $white;
+    height: 130px;
+    border-radius: 10px;
+  }
+}
+.card {
+  margin: 0 25px 25px 25px;
+}
+.needbe {
+  display: flex;
+  flex-wrap: wrap;
+  .needbe_item {
+    width: 33.33%;
+    text-align: center;
+    margin-bottom: 20px;
+    .iconImg {
+      width: 65px;
+      height: 65px;
+      border: 3px solid $primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      margin:10px auto;
+      .icon {
+        font-size: 40px;
+        color: $primary;
+      }
+    }
+    
+  }
+}
+.option {
+  margin: 25px;
+  display: flex;
+  justify-content: space-between;
+  .option_item {
+      width: 220px;
+      background: $white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      .text {
+        margin-top: 8px;
+      }
+      .icon {
+        font-size: 38px;
+        color: $primary;
+        margin-right: 5px;
+      }
+  }
+}
+.notice {
+  margin: 0 25px 25px;
+}
+

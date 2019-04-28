@@ -1,0 +1,13 @@
+.worklist {
+  width: 100%;
+  display: flex;
+  font-size: 30px;
+  .work_item {
+    flex: 1;
+    text-align: center;
+    padding-top: 16px;
+    .icon {
+      font-size:30px;
+    }
+  }
+}

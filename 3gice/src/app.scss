@@ -1,0 +1,26 @@
+
+
+$primary: #3888c8;
+$white: #fff;
+$gray6: #666;
+$gray9: #999;
+$grayd: #ddd;
+$graye: #eee;
+$red: #fe1802;
+
+page, body {
+  background: #e5e5e5;
+  font-size: 28px;
+}
+.redColor {
+  color: $red;
+}
+.mgr20 {
+  margin-right: 20px;
+}
+.mgt20 {
+  margin-top: 20px;
+}
+.mgb20 {
+  margin-bottom: 20px;
+}

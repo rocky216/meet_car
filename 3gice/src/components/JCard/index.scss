@@ -1,0 +1,35 @@
+@import "../../app.scss";
+
+.jcard {
+  background: $white;
+  border-radius: 10px;
+  .jcardtop {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $graye;
+    .jcardtitle {
+      display: flex;
+      padding: 20px; 
+      font-size: 32px;  
+      .jcardicon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: $primary;
+        border-radius: 50%;
+        margin: 15px 10px 0 0;
+      }
+    }
+  }
+  
+  .more {
+    padding: 20px 20px 0 0;
+    color: $gray6;
+    font-size: 28px;
+  }
+  .content {
+    padding: 20px;
+  }
+}
+
+
