@@ -1,0 +1,19 @@
+@import "../../app.scss";
+
+.signnamelist {
+  display: flex;
+  .signname_item {
+    width: 25%;
+    text-align: center;
+  }
+}
+
+.dataList {
+  .data_item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid $graye;
+  }
+  
+}

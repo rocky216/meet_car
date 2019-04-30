@@ -48,12 +48,14 @@ class News extends Component {
             right="消息类型"
             bottom="重要"
             left="接收时间:2019-02-26 16:02:14"
+            link="/pages/news/detail"
           />
           <Cell
             top="总成零件工作审批预警"
             right="消息类型"
             bottom="重要"
             left="接收时间:2019-02-26 16:02:14"
+            link="/pages/news/detail"
           />
         </View>
       </View>

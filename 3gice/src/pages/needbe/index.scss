@@ -1,0 +1,20 @@
+@import "../../app.scss";
+
+.detail {
+  .type {
+    display: flex;
+    background: $white;
+    justify-content: space-around;
+    padding: 20px 30px;
+  }
+  .note {
+    font-size: 24px;
+  }
+  .totalday {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: $white;
+    color: $primary;
+  }
+}

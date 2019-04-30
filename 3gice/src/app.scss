@@ -8,12 +8,17 @@ $grayd: #ddd;
 $graye: #eee;
 $red: #fe1802;
 
+
+
 page, body {
   background: #e5e5e5;
   font-size: 28px;
 }
 .redColor {
   color: $red;
+}
+.primaryColor {
+  color: $primary;
 }
 .mgr20 {
   margin-right: 20px;
@@ -24,3 +29,5 @@ page, body {
 .mgb20 {
   margin-bottom: 20px;
 }
+
+

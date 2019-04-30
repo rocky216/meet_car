@@ -35,30 +35,35 @@ class Search extends Component {
 
   render(){
     const {input1, input2, date1, date2} = this.state
-    const {label1, label2} = this.props
-
+    const {label1, label2, isNodate} = this.props
+    
     return (
       <View>
-        <Picker 
-          mode="date" 
-          onChange={this.bindTimeChange1.bind(this)}>   
-          <MyInput 
-            label="开始时间" 
-            value={date1} 
-            placeholder="请选择开始时间"
-            disabled
-          />
-         </Picker>
-        <Picker 
-          mode="date"
-          onChange={this.bindTimeChange2.bind(this)}>
-          <MyInput 
-            label="结束时间" 
-            value={date2} 
-            placeholder="请选择结束时间"
-            disabled
-          />
-        </Picker>
+        {!isNodate?(
+          <View>
+            <Picker 
+              mode="date" 
+              onChange={this.bindTimeChange1.bind(this)}>   
+              <MyInput 
+                label="开始时间" 
+                value={date1} 
+                placeholder="请选择开始时间"
+                disabled
+              />
+            </Picker>
+            <Picker 
+              mode="date"
+              onChange={this.bindTimeChange2.bind(this)}>
+              <MyInput 
+                label="结束时间" 
+                value={date2} 
+                placeholder="请选择结束时间"
+                disabled
+              />
+            </Picker>
+          </View>
+        ):null}
+        
         <MyInput 
           label={label1} 
           value={input1} 

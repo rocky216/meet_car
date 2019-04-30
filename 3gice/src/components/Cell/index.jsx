@@ -9,11 +9,19 @@ class Cell extends Component {
     super(props)
   }
 
+  navigateTab(){
+    if(this.props.link){
+      Taro.navigateTo({
+        url: this.props.link
+      })
+    }
+  }
+
   render(){
     const {icon, top, right, bottom, left} = this.props
 
     return (
-      <View className="cell">
+      <View className="cell" onClick={this.navigateTab.bind(this)}>
       
         <View className="cell_main">
           <View className="cell_item">

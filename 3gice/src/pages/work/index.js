@@ -44,6 +44,7 @@ class Work extends Component {
             right="日常工作-实施部(2019)"
             bottom="35%"
             left="工期：2019/02/25~2019/02/28(0.3天)"
+            link="/pages/work/submitdetail"
           />
           <Cell
             icon="icon iconfont icon-work"
@@ -51,6 +52,7 @@ class Work extends Component {
             right="日常工作-实施部(2019)"
             bottom="35%"
             left="工期：2019/02/25~2019/02/28(0.3天)"
+            link="/pages/work/submitdetail"
           />
         </View>
       </View>

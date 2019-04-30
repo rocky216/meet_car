@@ -20,16 +20,16 @@ class Index extends Component {
     super(props)
     this.state={
       needbeList: [
-        {title: "待办流程审批", icon: "icon iconfont icon-approval",link:"/", unread: 2},
-        {title: "管理审批", icon: "icon iconfont icon-admin",link:"/", unread: 3},
-        {title: "未处理会签", icon: "icon iconfont icon-untreated",link:"/", unread: 18},
-        {title: "零件工作审批", icon: "icon iconfont icon-parts",link:"/", unread: 6},
-        {title: "输出物审批", icon: "icon iconfont icon-output",link:"/", unread: 3}
+        {title: "待办流程审批", icon: "icon iconfont icon-approval",link:"/pages/needbe/index", unread: 2},
+        {title: "管理审批", icon: "icon iconfont icon-admin",link:"/pages/manage/index", unread: 3},
+        {title: "未处理会签", icon: "icon iconfont icon-untreated",link:"/pages/unsign/index", unread: 18},
+        {title: "零件工作审批", icon: "icon iconfont icon-parts",link:"/pages/parts/index", unread: 6},
+        {title: "输出物审批", icon: "icon iconfont icon-output",link:"/pages/output/index", unread: 3}
       ] 
     }
   }
 
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps (nextProps) { 
     
   }
 
@@ -42,7 +42,11 @@ class Index extends Component {
   }
 
   componentDidHide () { }
-
+  navigateTab(item){
+    Taro.navigateTo({
+      url: item.link
+    })
+  }
   render () {
     const {needbeList} = this.state
     return (
@@ -79,17 +83,15 @@ class Index extends Component {
           <JCard title="代办工作" >
             <View className="needbe">
               {needbeList.map((item, index)=>(
-                <View className="needbe_item" key={index}>
-                  <Navigator url="/"> 
-                    <View>
-                      <AtBadge value={item.unread}>
-                        <View className="iconImg">
-                          <Text className={item.icon}></Text>
-                        </View>
-                      </AtBadge>
-                    </View>
-                    <Text>代办流程</Text>
-                  </Navigator>
+                <View className="needbe_item" onClick={this.navigateTab.bind(this, item)} key={index}>
+                  <View>
+                    <AtBadge value={item.unread}>
+                      <View className="iconImg">
+                        <Text className={item.icon}></Text>
+                      </View>
+                    </AtBadge>
+                  </View>
+                  <Text>{item.title}</Text>
                 </View>
               ))}
             </View>
@@ -102,12 +104,12 @@ class Index extends Component {
             <Text className="text">个人请假</Text>
           </View>
           <View className="option_item">
-            <Text className="icon iconfont icon-leave"></Text>
-            <Text className="text">个人请假</Text>
+            <Text className="icon iconfont icon-overtime"></Text>
+            <Text className="text">加班请假</Text>
           </View>
           <View className="option_item">
-            <Text className="icon iconfont icon-leave"></Text>
-            <Text className="text">个人请假</Text>
+            <Text className="icon iconfont icon-reimbursement"></Text>
+            <Text className="text">个人报销</Text>
           </View>
         </View>
       

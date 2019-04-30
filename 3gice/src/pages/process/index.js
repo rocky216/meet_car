@@ -15,12 +15,14 @@ class Process extends Component {
           right="采购流程"
           bottom="申请日期：2019-03-10"
           left="行政后勤审批"
+          link="/pages/process/timeline"
         />
         <Cell
           top="【日常工作-商务部(2019)】出差"
           right="采购流程"
           bottom="申请日期：2019-03-10"
           left="行政后勤审批"
+          link="/pages/process/timeline"
         />
       </View>
     )

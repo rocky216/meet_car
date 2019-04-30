@@ -14,7 +14,7 @@ class Timeline extends Component {
         { title: '项目经理审批', content: ["郑文杰"]}, 
         { title: '项目经理审批', content: ["旷亮平"]},
         { title: '项目经理审批', content: ["曾小志"], color: "yellow"},
-        { title: '行政管理总监', content: ["刘瑞英"]},
+        { title: '行政管理总监', content: ["刘瑞英"], color: "yellow"},
       ]
     }
   }

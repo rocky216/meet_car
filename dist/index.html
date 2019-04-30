@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no,width=device-width">
+    <title>my-pro</title>
+    <script>
+    document.addEventListener('plusready', function() {
+      var webview = plus.webview.currentWebview();
+      var first = null;
+      plus.key.addEventListener('backbutton', function() {
+        
+          webview.canBack(function(e) {
+            
+              if(e.canBack) {
+                  webview.back();  
+                } else {
+                  
+                  // webview.close(); //hide,quit
+                  // plus.runtime.quit();
+                  // plus.nativeUI.toast(e.canBack);
+
+                  
+                  if (!first) {
+                        first = new Date().getTime();
+                        plus.nativeUI.toast("再按一次退出应用");
+                        setTimeout(function() {
+                            first = null;
+                        }, 1000);
+                    } else {
+                        if (new Date().getTime() - first < 1500) {
+                            webview.close();
+                            plus.runtime.quit();
+                        }
+                    }
+
+                  // document.plusReady(function() {
+                  //     //首页返回键处理
+                  //     //处理逻辑：1秒内，连续两次按返回键，则退出应用；
+                      
+                  // });
+              }
+          })
+      });
+    });
+    </script>
+  <link href="static/css/app.4eca6be869849192a4b11797dfdd00a0.css" rel="stylesheet"></head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <!-- <script type="text/javascript" src="http://192.168.2.112:8080/app.js"></script> -->
+  <script type="text/javascript" src="static/js/manifest.2ae2e69a05c33dfc65f8.js"></script>
+  <script type="text/javascript" src="static/js/vendor.b18f361131e4d6a69608.js"></script>
+  <script type="text/javascript" src="static/js/app.9a7b04f3de7237f0ffd8.js"></script></body>
+</html>

@@ -22,6 +22,18 @@ class App extends Component {
 
   config = {
     pages: [
+      'pages/leave/detail',
+      'pages/index/index', 
+      'pages/output/detail',
+      'pages/output/index',
+      'pages/parts/detail',
+      'pages/parts/index', 
+      'pages/unsign/index', 
+      'pages/unsign/detail',
+      'pages/manage/index',
+      'pages/manage/detail',
+      'pages/needbe/detail',
+      'pages/needbe/index',
       'pages/process/timeline',
       'pages/process/index',
       'pages/news/detail',
@@ -30,8 +42,7 @@ class App extends Component {
       'pages/work/submitdetail',
       'pages/work/index',
       'pages/warn/detail',
-      'pages/warn/index',
-      'pages/index/index'
+      'pages/warn/index'
     ],
     window: {
       backgroundTextStyle: 'light',
