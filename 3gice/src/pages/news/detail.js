@@ -5,6 +5,7 @@ import {connect} from "@tarojs/redux"
 import "./index.scss"
 import MyInput from "@/components/MyInput" 
 import {detailList} from "./datas"
+import Header from "@/components/Header"
 
 class Detail extends Component {
   constructor(props){
@@ -17,6 +18,7 @@ class Detail extends Component {
   render(){
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="消息详情" />:''}
         <View className="title">
           <Text >【工作通知】 项目 日常工作-软件开发部(2019) 需求分析文档 中 日常管理工作计划 零件/总成工作委派</Text>
         </View>

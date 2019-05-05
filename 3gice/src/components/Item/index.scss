@@ -1,0 +1,9 @@
+@import "../../app.scss";
+
+.item_wrap {
+  padding: 10px 20px;
+  background: $white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $graye;
+}

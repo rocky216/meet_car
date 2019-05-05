@@ -5,6 +5,7 @@ import { AtCard, AtList, AtListItem } from 'taro-ui'
 import { connect } from '@tarojs/redux'
 import JCard from "@/components/JCard"
 import Approval from "@/components/Approval"
+import Header from "@/components/Header"
 
 class ManageDetail extends Component {
   constructor(props){
@@ -17,6 +18,7 @@ class ManageDetail extends Component {
   render(){
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="计划审批" />:''}
         <JCard title="项目信息">
           <View className="new_item">
             <Text>项目名称：</Text>

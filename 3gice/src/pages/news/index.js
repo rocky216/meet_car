@@ -5,6 +5,7 @@ import {connect} from "@tarojs/redux"
 import "./index.scss"
 import {newstypes} from "./datas"
 import Cell from "@/components/Cell"
+import Header from "@/components/Header"
 
 class News extends Component {
   constructor(props){
@@ -25,6 +26,7 @@ class News extends Component {
 
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="消息" />:''}
         <AtTabs
           current={current}
           tabList={tabList}

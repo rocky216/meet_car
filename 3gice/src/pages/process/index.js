@@ -4,12 +4,13 @@ import { AtTabs, AtTabsPane, AtButton } from "taro-ui"
 import {connect} from "@tarojs/redux"
 import "./index.scss"
 import Cell from "@/components/Cell"
-
+import Header from "@/components/Header"
 
 class Process extends Component {
   render(){
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="流程" />:''}
         <Cell
           top="【日常工作-商务部(2019)】出差"
           right="采购流程"

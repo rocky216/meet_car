@@ -1,0 +1,18 @@
+@import "../../app.scss";
+
+.date_wrap {
+  display: flex;
+  background: $white;
+  padding: 15px 20px;
+  .label, .to {
+    margin-top: 10px;
+  }
+  .startTime, .endTime {
+    width: 200px;
+    padding-left: 20px;
+    text-align: center;
+    .input {
+      height: 60px;
+    }
+  }
+}

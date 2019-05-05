@@ -5,6 +5,8 @@ import { AtTabs, AtTabsPane} from 'taro-ui'
 import { connect } from '@tarojs/redux'
 import Search from "@/components/Search"
 import Cell from "@/components/Cell"
+import Header from "@/components/Header"
+
 
 class Parts extends Component {
   constructor(props){
@@ -14,6 +16,7 @@ class Parts extends Component {
   render(){
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="零件工作审批" />:''}
         <Search
           label1="工作人员" 
           label2="工作名称"

@@ -3,6 +3,7 @@ import {View, Text} from "@tarojs/components"
 import { AtTabs, AtTabsPane, AtButton, AtTimeline  } from "taro-ui"
 import {connect} from "@tarojs/redux"
 import "./index.scss"
+import Header from "@/components/Header"
 
 class Timeline extends Component {
   constructor(props){
@@ -24,6 +25,7 @@ class Timeline extends Component {
 
     return (
       <View className="timeline">
+        {process.env.TARO_ENV==='h5'?<Header title="流程详情" />:''}
         <View>
           <AtTimeline items={items}/>
         </View>

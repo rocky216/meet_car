@@ -5,6 +5,7 @@ import { AtTabs, AtTabsPane, AtButton } from 'taro-ui'
 import { connect } from '@tarojs/redux'
 import MyInput from "@/components/MyInput"
 import Cell from "@/components/Cell"
+import Header from "@/components/Header"
 
 class Leave extends Component {
   constructor(props){
@@ -24,6 +25,7 @@ class Leave extends Component {
     console.log(current)
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="个人请假" />:''}
         <AtTabs 
           current={current} 
           tabList={tabList} 
@@ -130,6 +132,7 @@ class Leave extends Component {
               right="2019-02-25（申请）"
               bottom="2019-02-28（审批中）"
               left="2019-02-10~2019-02-10"
+              link="/pages/leave/detail"
             />
           </AtTabsPane>
         </AtTabs>

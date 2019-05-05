@@ -1,6 +1,7 @@
 import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
+import {View} from "@tarojs/components"
 // import 'taro-ui/dist/style/index.scss'
 import './assets/fonts/iconfont.css'
 import './custom-variables.scss'
@@ -21,9 +22,14 @@ const store = configStore()
 class App extends Component { 
 
   config = {
-    pages: [
-      'pages/leave/detail',
+    pages: [ 
       'pages/index/index', 
+      'pages/sign/index', 
+      'pages/account/index',
+      'pages/overtime/detail',
+      'pages/overtime/index',
+      'pages/leave/index',
+      'pages/leave/detail',
       'pages/output/detail',
       'pages/output/index',
       'pages/parts/detail',
@@ -65,7 +71,10 @@ class App extends Component {
   render () {
     return (
       <Provider store={store}>
-        <Index />
+        <View>
+          <Text>11</Text>
+          <Index />
+        </View>
       </Provider>
     )
   }

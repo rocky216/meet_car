@@ -10,7 +10,7 @@ class JCard extends Component {
   }
 
   render(){
-    const {title, link} = this.props
+    const {title, link, optionText} = this.props
     return (
       <View className="jcard">
         <View className="jcardtop">
@@ -18,6 +18,7 @@ class JCard extends Component {
             <Text className="jcardicon"></Text>
             <Text>{title}</Text>
           </View>
+          {optionText?<Text className="more primaryColor">{optionText}</Text>:''}
           {link?(
             <View className="more">
               <Navigator  link={link}>更多</Navigator>

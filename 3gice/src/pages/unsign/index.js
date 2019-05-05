@@ -5,6 +5,7 @@ import { AtTabs, AtTabsPane} from 'taro-ui'
 import { connect } from '@tarojs/redux'
 import Search from "@/components/Search"
 import Cell from "@/components/Cell"
+import Header from "@/components/Header"
 
 
 class Unsign extends Component {
@@ -24,6 +25,7 @@ class Unsign extends Component {
     const {current,tabList} = this.state
     return (  
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="未处理会签" />:''}
         <AtTabs current={current} tabList={tabList}
           onClick={(index)=>this.setState({current:index})}
         ></AtTabs>

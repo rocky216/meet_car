@@ -6,7 +6,7 @@ import "./index.scss"
 import MyInput from "@/components/MyInput"
 import Approval from "@/components/Approval"
 import {needbeDetail} from "./datas"
-
+import Header from "@/components/Header"
 
 
 class Detail extends Component {
@@ -21,6 +21,7 @@ class Detail extends Component {
     const {needbeDetail} = this.state
     return (
       <View className="detail">
+        {process.env.TARO_ENV==='h5'?<Header title="待办流程详情" />:''}
         <View className="type">
           <Label>
             <Radio value="1" />

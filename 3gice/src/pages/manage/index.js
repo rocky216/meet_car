@@ -4,6 +4,7 @@ import { View, Text, Navigator} from '@tarojs/components'
 import { AtButton} from 'taro-ui'
 import { connect } from '@tarojs/redux'
 import Cell from "@/components/Cell"
+import Header from "@/components/Header"
 
 class Manage extends Component {
   constructor(props){
@@ -16,6 +17,7 @@ class Manage extends Component {
   render(){
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="审批管理" />:''}
         <Cell
           top="SE-SV91材料利用率"
           right="变更计划审批"

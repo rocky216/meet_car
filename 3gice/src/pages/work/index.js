@@ -5,7 +5,7 @@ import {connect} from "@tarojs/redux"
 import Search from "@/components/Search"
 import Cell from "@/components/Cell"
 import "./index.scss"
-
+import Header from "@/components/Header"
 
 class Work extends Component {
   constructor(props){
@@ -28,6 +28,7 @@ class Work extends Component {
 
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="工作" />:''}
         <AtTabs 
           tabList={tabList} 
           current={current}

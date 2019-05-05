@@ -26,3 +26,20 @@
 .submitBtn {
   margin: 20px;
 }
+.total {
+  text-align: right;
+  padding: 10px 20px;
+  background: $white;
+}
+
+.tabel {
+  display: table;
+  width: 100%;
+  .tr {
+    display: table-row;
+  }
+  .tabelCell {
+    display: table-cell;
+    font-size: 28px;
+  }
+}

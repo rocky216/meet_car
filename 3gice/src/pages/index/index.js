@@ -47,8 +47,23 @@ class Index extends Component {
       url: item.link
     })
   }
+  handlenNavigate(val){
+    let url = ''
+    if(val == 1){
+      url = "/pages/leave/index"
+    }else if(val == 2){
+      url = "/pages/overtime/index"
+    }else if(val == 3){
+      url = "/pages/account/index"
+    }else if(val == 'sign'){
+      url = "/pages/sign/index"
+    }
+    
+    Taro.navigateTo({url})
+  }
   render () {
     const {needbeList} = this.state
+    
     return (
       <View> 
         <View className="top">
@@ -65,7 +80,7 @@ class Index extends Component {
             </View>
             <View className="text">
               <Text className="redColor mgr20 nosigin">您今天还未签到！</Text>
-              <View className="sign">
+              <View className="sign" onClick={this.handlenNavigate.bind(this, 'sign')}>
                 <Text>立即签到</Text>
                 <Text className="icon iconfont icon-arrow-right"></Text>
               </View>
@@ -99,15 +114,15 @@ class Index extends Component {
         </View>
         
         <View className="option">
-          <View className="option_item">
+          <View className="option_item" onClick={this.handlenNavigate.bind(this,1)}>
             <Text className="icon iconfont icon-leave"></Text>
             <Text className="text">个人请假</Text>
           </View>
-          <View className="option_item">
+          <View className="option_item" onClick={this.handlenNavigate.bind(this,2)}>
             <Text className="icon iconfont icon-overtime"></Text>
             <Text className="text">加班请假</Text>
           </View>
-          <View className="option_item">
+          <View className="option_item" onClick={this.handlenNavigate.bind(this,3)}>
             <Text className="icon iconfont icon-reimbursement"></Text>
             <Text className="text">个人报销</Text>
           </View>

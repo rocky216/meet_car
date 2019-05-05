@@ -5,7 +5,7 @@ import "./index.scss"
 import MyInput from "@/components/MyInput"
 import {workdetail} from "./datas"
 import JCard from "@/components/JCard"
-
+import Header from "@/components/Header"
 
 class SubmitDetail extends Component {
   constructor(props){
@@ -20,6 +20,7 @@ class SubmitDetail extends Component {
 
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="工作详情" />:''}
         <View>
           {workdetail.map((item, index)=>(
             <MyInput

@@ -5,6 +5,7 @@ import { AtTabs, AtTabsPane} from 'taro-ui'
 import { connect } from '@tarojs/redux'
 import Search from "@/components/Search"
 import Cell from "@/components/Cell"
+import Header from "@/components/Header"
 
 class Output extends Component {
   constructor(props){
@@ -23,6 +24,7 @@ class Output extends Component {
     const {current, tabList} = this.state
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="输出物工作审批" />:''}
         <AtTabs current={current} tabList={tabList} onClick={(current)=>this.setState({current})}></AtTabs>
         <View className="mgt20">
           <Search 

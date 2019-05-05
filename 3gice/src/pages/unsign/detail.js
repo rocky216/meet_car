@@ -7,6 +7,7 @@ import MyInput from "@/components/MyInput"
 import {detailList} from "./datas"
 import JCard from "@/components/JCard"
 import Cell from "@/components/Cell"
+import Header from "@/components/Header"
 
 class UnsignDetail extends Component { 
   constructor(props){
@@ -16,6 +17,7 @@ class UnsignDetail extends Component {
   render(){
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="会签" />:''}
         <View>
           {detailList.map((item, index)=>(
             <MyInput

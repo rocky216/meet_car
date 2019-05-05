@@ -18,7 +18,7 @@ class Cell extends Component {
   }
 
   render(){
-    const {icon, top, right, bottom, left} = this.props
+    const {icon, top, right, bottom, left, arrowRight} = this.props
 
     return (
       <View className="cell" onClick={this.navigateTab.bind(this)}>
@@ -27,17 +27,17 @@ class Cell extends Component {
           <View className="cell_item">
             <View>
               <Text className="icon iconfont icon-work"></Text>
-              <Text>{top}</Text>
+              <Text>{top?top:''}</Text>
             </View>
-            <Text>{right}</Text>
+            <Text>{right?right:''}</Text>
           </View>
           <View className="cell_item_bottom">
-            <Text>{left}</Text>
-            <Text>{bottom}</Text>
+            <Text>{left?left:''}</Text>
+            <Text>{bottom?bottom:''}</Text>
           </View>
         </View>
         <View className="arrow_right">
-          <AtIcon value='chevron-right' size='30' color='#999'></AtIcon>
+          {!arrowRight?<AtIcon value='chevron-right' size='30' color='#999'></AtIcon>:null}
         </View>
       </View>
     )

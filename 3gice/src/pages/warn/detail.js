@@ -5,6 +5,7 @@ import {AtCard, AtTextarea, AtButton } from "taro-ui"
 import "./index.scss"
 import MyInput from "@/components/MyInput"
 import {detailList, approvalType} from "./datas"
+import Header from "@/components/Header"
 
 class WarnDetail extends Component {
   constructor(props){
@@ -23,6 +24,7 @@ class WarnDetail extends Component {
     
     return (
       <View className="warndetail"> 
+        {process.env.TARO_ENV==='h5'?<Header title="总成/零件工作审批" />:''}
         <View>
           {detailList.map((item, index)=>(
             <MyInput

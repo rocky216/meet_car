@@ -4,6 +4,7 @@ import {View, Text} from "@tarojs/components"
 import {AtCard, AtTabs, AtTabsPane } from "taro-ui"
 import Search from "@/components/Search"
 import "./index.scss"
+import Header from "@/components/Header"
 
 class Warn extends Component {
   constructor(props){
@@ -18,10 +19,10 @@ class Warn extends Component {
   }
 
   render(){
-    const {tabList, current} = this.state
-
+    const {tabList, current} = this.state 
     return (
       <View>
+        {process.env.TARO_ENV==='h5'?<Header title="预警" />:''}
         <AtTabs
           tabList={tabList}
           current={current}
