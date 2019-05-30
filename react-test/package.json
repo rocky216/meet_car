@@ -1,0 +1,51 @@
+{
+  "name": "react-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --env.dev",
+    "dll": "webpack --config ./webpack.dll.config.js"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "antd": "^3.18.2",
+    "lazy-route": "^1.0.7",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-animated-router": "^0.1.12",
+    "react-dom": "^16.8.6",
+    "react-marquee-order": "^0.2.2",
+    "react-redux": "^7.0.3",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-router-redux": "^4.0.8",
+    "react-scoped-style": "^0.3.0",
+    "react-transition-group": "^4.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-1": "^7.0.0",
+    "@babel/preset-stage-2": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.1.2",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "react-scoped-styles": "^0.2.81",
+    "style-loader": "^0.23.1",
+    "style-resources-loader": "^1.2.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  }
+}
