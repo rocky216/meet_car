@@ -2,6 +2,7 @@ var path = require("path")
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 var manifest = require('./dist/js/vendor-manifest.json')
+const themeConfig = require("./src/assets/less/theme.js")
 
 function resolve(str){
   return path.resolve(__dirname, str)
@@ -56,9 +57,10 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: [
+          // 'react-scoped-styles/script-loader',
+          {loader: "babel-loader"}
+        ]
       },
       {
         test: /\.css$/,
@@ -66,12 +68,21 @@ module.exports = {
       },
       {
         test: /\.less$/,
+        exclude: /node_modules/,
         use: [{
           loader: 'style-loader' // creates style nodes from JS strings
         }, {
           loader: 'css-loader' // translates CSS into CommonJS
-        }, {
-          loader: 'less-loader' // compiles Less to CSS
+        }, 
+        // {
+        //   loader: 'react-scoped-styles/style-loader',
+        // },
+        {
+          loader: 'less-loader', // compiles Less to CSS
+          options: {
+            modifyVars: themeConfig,
+            javascriptEnabled: true
+          }
         },{
           loader: 'style-resources-loader',
           options: {

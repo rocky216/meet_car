@@ -6,10 +6,10 @@ import reducers from "@/reducers"
 
 
 
-let store = createStore(
+window.store = createStore(
               reducers,
               applyMiddleware(reduxthunk)
             )
 
 
-export default store
+export default window.store

@@ -1,8 +1,11 @@
 import React from "react"
+import {connect }  from "react-redux"
+import {bindActionCreators} from "redux"
 import {Row, Col, Card, Table } from "antd"
 import { Link }  from "react-router-dom"
 import {tabList1, tabList2, tabList3, tabList4, columns, dataSourceList} from "./datas"
 import {addIndex} from "@/utils"
+import {getSelectKey} from "@/actions/appAction"
 
 class InfoStatis extends React.Component {
   constructor(props){
@@ -16,6 +19,13 @@ class InfoStatis extends React.Component {
       dataSourceList,
     }
   }
+  
+  componentWillMount(){
+    this.props.actions.getSelectKey(['1', '102']) 
+  }
+
+  
+
   getCol(){
     return columns.concat([{
       title: "操作",
@@ -67,4 +77,14 @@ class InfoStatis extends React.Component {
   }
 }
 
-export default InfoStatis
+function mapDispatchProps(dispatch){
+  return {
+    actions: bindActionCreators({getSelectKey}, dispatch)
+  }
+}
+
+function mapStateProps(state){
+  return {}
+}
+
+export default connect(mapStateProps, mapDispatchProps)(InfoStatis)

@@ -1,12 +1,8 @@
-const initialState = {
-  spinning: true
-}
+import {combineReducers} from "redux"
+import appReducer from "./appReducer"
 
-export default function (state = initialState, action){
-  switch (action.type) {
-    case 'GET_LOADING':
-      return Object.assign({},state, action)
-    default:
-        return state
-  }
-}
+const reducers = combineReducers({
+  app: appReducer
+})
+
+export default reducers

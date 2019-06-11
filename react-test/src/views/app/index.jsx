@@ -1,30 +1,40 @@
 import React from "react"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
-import {getappAction } from "@/actions/appAction"
 import Routes from "@/routers"
-import {Layout } from "antd"
+import {Layout} from "antd"
 import SideBar from "@/components/SideBar"
+import BreadCrumb from "@/components/BreadCrumb"
+import HeaderBox from "@/components/Header"
+import LinkTabs from "@/components/LinkTabs"
 import "./index.less"
+import Login from "@/views/auth"
 
 const { Header, Sider, Content } = Layout;
 
 class App extends React.Component {
   componentWillMount(){
-    this.props.actions.getappAction()
   }
  
   render(){
+    const {component: Component, pending, logged, ...rest} = this.props
+    
+
     return (
       <Layout>
-        <Header>Header</Header>
+        <Sider >
+          <div style={{marginTop: "60px"}}></div>
+          <SideBar/>
+        </Sider>
         <Layout>
-          <Sider >
-            <SideBar/>
-          </Sider>
+        <Header>
+          <HeaderBox/>
+        </Header>
           <Content>
-            <div style={{minHeight:"850px", padding:"10px", background: "#eee"}}>
-              
+            <div className="breadcrumb">
+              <LinkTabs/>
+            </div>
+            <div style={{minHeight:"850px", padding:"0 10px 10px", background: "#eee"}}>
               <Routes/>
             </div>
           </Content>
@@ -36,11 +46,12 @@ class App extends React.Component {
 
 function mapDispatchProps(dispatch){
   return {
-    actions: bindActionCreators({getappAction}, dispatch)
+    actions: bindActionCreators({}, dispatch)
   }
 }
 
 function mapStateProps(state){
+  console.log(state)
   return {}
 }
 

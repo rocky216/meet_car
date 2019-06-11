@@ -1,39 +1,40 @@
 export default [
   {
+    title: "工作台",
+    key: 0,
+    link: "/",
+    icon: 'home',
+  },
+  {
     title: "个人中心",
     key: 1,
-    link: "/home",
+    link: "/users",
     icon: 'user',
     children: [
       {
-        title: "工作台",
-        key: 101,
-        link: "/home"
-      },
-      {
         title: "信息统计",
         key: 102,
-        link: "/infostatis"
+        link: "/users/infostatis"
       },
       {
         title: "我的工作",
         key: 103,
-        link: "/mywork"
+        link: "/users/mywork"
       },
       {
         title: "工作审批",
         key: 104,
-        link: ""
+        link: "/users/workApproval"
       },
       {
         title: "我的消息",
         key: 105,
-        link: ""
+        link: "/users/mynews"
       },
       {
         title: "个人投诉",
         key: 106,
-        link: ""
+        link: "/users/mycomplaint"
       },
       {
         title: "密码修改",
